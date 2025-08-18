@@ -4,7 +4,9 @@
     --color-white: #FFFFFF;
     --color-black: #000000;
     --color-gray-0: #dadadaff;
-    --color-gray-8: #494949ff;
+    --color-gray-1: #afafafff;
+    --color-gray-2: #8f8f8fff;
+    --color-gray-3: #494949ff;
 }
 
 * {
@@ -15,6 +17,10 @@
 body {
     margin: 0;
     padding: 0;
+}
+
+button {
+    cursor: pointer;
 }
 
 header {
@@ -47,7 +53,7 @@ header .container nav ul li {
     margin: 0;
     padding: 0;
     padding-left: 50px;
-    color: var(--color-gray-8);
+    color: var(--color-gray-3);
     font-weight: bold;
 }
 
@@ -61,8 +67,9 @@ section {
 section .container {
     display: flex;
     width: 100%;
-    max-width: 1300px;
-    min-height: calc(100vh - 80px);;
+    max-width: 1200px;
+    min-height: calc(100vh - 80px);
+    align-items: center;
 }
 
 section .container img {
@@ -70,5 +77,105 @@ section .container img {
 }
 
 section .headline {
-    font-size: 3rem;
+    font-size: 3.5em;
+}
+
+section p {
+    font-size: 1.5em;
+    color: var(--color-gray-3);
+}
+
+button {
+    border: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2), 0 4px 6px rgba(0, 0, 0, 0.2);
+    padding: 1em;
+    border-radius: 0.5em;
+}
+
+.btn-dark {
+    background-color: var(--color-black);
+    color: var(--color-white);
+    
+}
+
+.btn-light {
+    background-color: var(--color-white);
+    color: var(--color-black);
+}
+
+#illustrations .container {
+    text-align: center;
+    display: flex;
+    flex-direction: column;  /* organiza header em cima e body embaixo */
+    align-items: center;     /* centraliza o conteúdo */
+    width: 100%;
+    max-width: 1200px;
+    min-height: calc(100vh - 80px);
+    margin: 0 auto;          /* centraliza o container na tela */
+}
+
+#illustrations .container .body {
+    display: flex;
+    justify-content: center; /* deixa os artigos centralizados */
+    gap: 2em;               /* espaçamento entre eles */
+    flex-wrap: wrap;         /* quebra linha se não couber */
+    width: 100%;
+}
+
+#illustrations .container .body article {
+    flex: 1 1 250px;   /* largura flexível com mínimo de 300px */
+    max-width: 250px;  /* impede de ficar gigante */
+}
+
+article {
+    border: none;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2), 0 2px 4px rgba(0, 0, 0, 0.2);
+    padding: 2em;
+    border-radius: 0.5em;
+    transition: box-shadow 0.3s ease;
+}
+
+article:hover {
+    box-shadow: 0 16px 16px rgba(0, 0, 0, 0.2), 0 16px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card .card-description .card-title {
+    color: var(--color-black);
+}
+
+.card .card-description .card-text {
+    color: var(--color-gray-2);
+    font-size: 16px;
+}
+
+#illustrations .container .body article img {
+    width: 100%;        /* ocupa toda largura do article */
+    height: auto;       /* mantém proporção da imagem */
+    object-fit: cover;  /* ajusta o conteúdo dentro do espaço */
+    border-radius: 8px 8px 0 0; /* arredonda só o topo se quiser */
+}
+
+.card .card-description {
+    padding-top: 2em;
+}
+
+.typewriter {
+  display: inline-block;
+  overflow: hidden;       /* esconde o texto até aparecer */
+  white-space: nowrap;    /* não quebra linha */
+  border-right: 2px solid black; /* efeito do cursor */
+  animation: typing 3s steps(40, end) infinite,
+             blink 0.6s step-end infinite alternate;
+}
+
+/* digitando */
+@keyframes typing {
+  from { width: 20%; }
+  to { width: 100%; }
+}
+
+/* piscando o cursor */
+@keyframes blink {
+  from { border-color: transparent; }
+  to { border-color: black; }
 }
