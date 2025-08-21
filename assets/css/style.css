@@ -23,6 +23,10 @@ button {
     cursor: pointer;
 }
 
+.material-symbols-outlined {
+    font-size: 4em;
+}
+
 header {
     display: flex;
     justify-content: center; /*centraliza a div no meio da tela(de acordo com o eixo principal "x" ou "y")*/
@@ -40,8 +44,8 @@ header .container {
 
 header .container .logo {
     background-color: var(--color-black);
-    width: 50px;
-    height: 50px;
+    width: 60px;
+    height: 60px;
 }
 
 header .container nav ul {
@@ -70,9 +74,14 @@ section .container {
     max-width: 1200px;
     min-height: calc(100vh - 80px);
     align-items: center;
+    gap: 5em;
 }
 
 section .container img {
+    height: 400px;
+}
+
+#img-logo {
     height: 600px;
 }
 
@@ -103,7 +112,7 @@ button {
     color: var(--color-black);
 }
 
-#illustrations .container {
+#illustrations .container, #examples .container {
     text-align: center;
     display: flex;
     flex-direction: column;  /* organiza header em cima e body embaixo */
@@ -112,9 +121,10 @@ button {
     max-width: 1200px;
     min-height: calc(100vh - 80px);
     margin: 0 auto;          /* centraliza o container na tela */
+    justify-content
 }
 
-#illustrations .container .body {
+#illustrations .container .body, #examples .container .body {
     display: flex;
     justify-content: center; /* deixa os artigos centralizados */
     gap: 2em;               /* espaçamento entre eles */
@@ -122,7 +132,7 @@ button {
     width: 100%;
 }
 
-#illustrations .container .body article {
+#illustrations .container .body article, #examples .container .body article {
     flex: 1 1 250px;   /* largura flexível com mínimo de 300px */
     max-width: 250px;  /* impede de ficar gigante */
 }
