@@ -7,6 +7,9 @@
     --color-gray-1: #afafafff;
     --color-gray-2: #8f8f8fff;
     --color-gray-3: #494949ff;
+    --color-blue-1: rgba(0, 178, 184, 0.06);
+    --color-blue-3: #00a4aaff;
+    --color-green: #1caa00ff;
 }
 
 * {
@@ -25,6 +28,16 @@ button {
 
 .material-symbols-outlined {
     font-size: 4em;
+}
+
+.fa-instagram {
+    color: #b412acff;
+    font-size: 25px;
+}
+
+.fa-linkedin {
+    color: #05c2e4ff;
+    font-size: 25px;
 }
 
 header {
@@ -112,7 +125,15 @@ button {
     color: var(--color-black);
 }
 
-#illustrations .container, #examples .container {
+.btn-blue {
+    background-color: var(--color-blue-3);
+    color: var(--color-white);
+}
+
+#illustrations .container,
+#examples .container,
+#price .container,
+#comments .container {
     text-align: center;
     display: flex;
     flex-direction: column;  /* organiza header em cima e body embaixo */
@@ -124,7 +145,10 @@ button {
     justify-content
 }
 
-#illustrations .container .body, #examples .container .body {
+#illustrations .container .body,
+#examples .container .body,
+#price .container .body,
+#comments .container .body {
     display: flex;
     justify-content: center; /* deixa os artigos centralizados */
     gap: 2em;               /* espaçamento entre eles */
@@ -132,7 +156,10 @@ button {
     width: 100%;
 }
 
-#illustrations .container .body article, #examples .container .body article {
+#illustrations .container .body article,
+#examples .container .body article,
+#price .container .body article,
+#comments .container .body article {
     flex: 1 1 250px;   /* largura flexível com mínimo de 300px */
     max-width: 250px;  /* impede de ficar gigante */
 }
@@ -156,6 +183,7 @@ article:hover {
 .card .card-description .card-text {
     color: var(--color-gray-2);
     font-size: 16px;
+    white-space: normal;
 }
 
 #illustrations .container .body article img {
@@ -188,4 +216,115 @@ article:hover {
 @keyframes blink {
   from { border-color: transparent; }
   to { border-color: black; }
+}
+
+/*
+#price article ul {
+    min-height: 125px;
+    padding: 0px;
+    margin: 0px;
+    padding-bottom: 20px;
+}
+
+#price article ul li {
+    list-style: none;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--color-black);
+}
+*/
+#price article {
+    padding: 3em;
+    background-color: var(--color-blue-1);
+}
+
+#price article ul {
+    min-height: 200px;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6em; /* espaço entre os itens */
+}
+
+#price article ul li {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--color-black);
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+    position: relative;
+}
+
+#price article ul li i {
+    font-size: 20px;
+    color: var(--color-green);
+}
+
+.card-description-time {
+    font-size: 0.8em;
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
+    gap:1em;
+}
+
+.card-description-time i {
+    width: 25px;
+    height: 25px;
+    background-color: var(--color-black);
+    border-radius: 20px;
+    color: var(--color-white);
+}
+
+.card-description-price .card-description-price-title {
+    color: var(--color-black);
+    font-size: 4em;
+    margin-top: 15px;
+    padding-top: 15px;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+}
+
+.card-description-price .card-description-price-title b {
+    color: var(--color-gray-2);
+    font-size: 30px;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+}
+
+.card-description-price .card-description-price-text {
+    color: var(--color-gray-1);
+    font-size: 14px;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+    font-weight: bold;
+    padding-bottom: 40px;
+}
+
+#price button {
+    padding: 1em 3em;
+}
+
+#comments article {
+    text-align: left;
+    display: flex;
+}
+
+#comments article .profile {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+}
+
+#comments article .profile .profile-text {
+    font-weight: bold;
+}
+
+#comments article img {
+    height: 50px;
+    border: 1px solid var(--color-gray-1);
+    border-radius: 25px;
+    width: auto;
 }
