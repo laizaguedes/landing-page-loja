@@ -1,2 +1,2 @@
-# landing-page-loja
+# landing-page
 Template para landing pages de loja
